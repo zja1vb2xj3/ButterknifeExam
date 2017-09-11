@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by user on 2017-09-12.
@@ -27,11 +28,19 @@ public class AFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
+        ButterKnife.bind(this, view);
+
         button1.setOnClickListener(v -> button1Click());
+        button2.setOnClickListener(v -> button2Click());
+
         return view;
     }
 
+    private void button2Click() {
+        Toast.makeText(getContext(), "Fragment button2 Clicked", Toast.LENGTH_SHORT).show();
+    }
+
     private void button1Click() {
-        Toast.makeText(getContext(), "button1 Clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Fragment button1 Clicked", Toast.LENGTH_SHORT).show();
     }
 }

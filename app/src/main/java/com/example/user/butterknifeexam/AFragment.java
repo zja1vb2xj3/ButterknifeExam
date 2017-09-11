@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import butterknife.BindView;
 
@@ -26,6 +27,11 @@ public class AFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
+        button1.setOnClickListener(v -> button1Click());
         return view;
+    }
+
+    private void button1Click() {
+        Toast.makeText(getContext(), "button1 Clicked", Toast.LENGTH_SHORT).show();
     }
 }

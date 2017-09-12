@@ -12,8 +12,12 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.moveToButterKnifeActivity_Button) Button moveToButterKnifeActivity_Button;
-    @BindView(R.id.moveToNormalActivity_Button) Button moveToNormalActivity_Button;
+    @BindView(R.id.moveToButterKnifeActivity_Button)
+    Button moveToButterKnifeActivity_Button;
+    @BindView(R.id.moveToNormalActivity_Button)
+    Button moveToNormalActivity_Button;
+    @BindView(R.id.moveToThreeViewActivity_Button)
+    Button moveToThreeViewActivity_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         moveToButterKnifeActivity_Button.setOnClickListener(v -> moveToButterKnifeActivity_ButtonClick());
         moveToNormalActivity_Button.setOnClickListener(v -> moveToNormalActivity_ButtonClick());
+        moveToThreeViewActivity_Button.setOnClickListener(v -> moveToThreeViewActivity_ButtonClick());
+    }
+
+    private void moveToThreeViewActivity_ButtonClick() {
+        Intent intent = new Intent(this, ThreeViewActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(intent);
     }
 
     private void moveToButterKnifeActivity_ButtonClick() {

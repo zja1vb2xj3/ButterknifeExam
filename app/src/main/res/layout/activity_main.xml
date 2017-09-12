@@ -19,6 +19,13 @@
         android:id="@+id/moveToNormalActivity_Button"
         android:text="moveToNormalActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/moveToThreeViewActivity_Button"
+        android:text="moveToThreeViewActivity"
+        />
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

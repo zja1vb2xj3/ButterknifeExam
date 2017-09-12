@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ButterKnifeActivity" />
-        <activity android:name=".NormalActivity"></activity>
+        <activity android:name=".NormalActivity" />
+        <activity android:name=".ThreeViewActivity"></activity>
     </application>
 
 </manifest>
